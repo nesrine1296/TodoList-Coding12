@@ -8,6 +8,8 @@ let divlist = document.getElementsByClassName('box-body')[0]
 
 
 
+
+
 var text = document.createElement("input")
 
 
@@ -16,6 +18,7 @@ boutonajouter.addEventListener ('click',() => {
 let prinput = document.querySelector ('#exo-1 input')
 let li = document.createElement('li')
 let ul = document.createElement('ul')
+li.style.alignItems = "center"
 divlist.appendChild(ul)
 ul.appendChild(li)
 li.innerText = `${prinput.value}`
@@ -23,14 +26,19 @@ li.style.border='solid grey 1px'
 
 li.style.backgroundColor = "grey"
 
-li.appendChild(iconecheck) 
-li.appendChild(iconeedit)
-li.appendChild(iconetrash)
+let divicones = document.createElement ('div')
+divicones.appendChild(iconecheck)
+divicones.appendChild(iconeedit)
+divicones.appendChild(iconetrash)
+li.appendChild(divicones)
+divicones.style.marginLeft = "850px"
 
-let div2 = document.createElement("div")
-div2.style.marginLeft = "20"
-div2.style.justifyContent = 'right'
-li.appendChild('div2')
+
+
+
+
+
+
 
 })
 
@@ -40,7 +48,7 @@ li.appendChild('div2')
 let iconecheck = document.createElement('i')
 iconecheck.setAttribute('class',"far fa-check-circle")
 iconecheck.style.color = 'blue'
-iconecheck.style.marginRight = '100px'
+
 
 // icone edit
 //iconeedit
@@ -48,7 +56,7 @@ iconecheck.style.marginRight = '100px'
 let iconeedit = document.createElement('i')
 iconeedit.setAttribute('class',"far fa-edit")
 iconeedit.style.color = 'yellow'
-iconeedit.style.marginRight = '100px'
+
 
 //icone trash 
 //iconetrash
@@ -56,12 +64,6 @@ iconeedit.style.marginRight = '100px'
 let iconetrash = document.createElement('i')
 iconetrash.setAttribute('class',"far fa-trash-alt")
 iconetrash.style.color = 'red'
-iconetrash.style.marginRight = '100px'
-
-
-
-
-
 
 
 
